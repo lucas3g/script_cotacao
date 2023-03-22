@@ -1,4 +1,4 @@
-import requests
+import httpx
 import time
 
 class Cotacoes:
@@ -13,7 +13,7 @@ print('Executando API. Aguarde...')
 url = 'https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL'
 
 # Faz uma requisição GET para a API
-response = requests.get(url)
+response = httpx.get(url)
 
 # Analisa a resposta da API como um objeto JSON
 data = response.json()
